@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}  
+        <!-- Page Header-->
+        <header class="masthead">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <table style="color:white;" class = "table"> 
+                        <thead> 
+                        <tr> 
+                            <th scope="col">ID</th> 
+                            <th scope="col">Name</th> 
+                            <th scope="col">Email</th> 
+                            <th scope="col">Phone</th> 
+                        </tr> 
+                        </thead> 
+                        <tbody> 
+                            {% for row in value %}  
+                                <tr> 
+                                    <td>{{row[0]}}</td> 
+                                    <td>{{row[1]}}</td> 
+                                    <td>{{row[2]}}</td> 
+                                    <td>{{row[3]}}</td> 
+                                </tr> 
+                            {% endfor %} 
+                        </tbody> 
+                    </table>
+                </div>
+            </div>
+        </header>
+        
+{% endblock %}
